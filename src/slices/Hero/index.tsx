@@ -7,6 +7,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { View } from "@react-three/drei";
+import Image from "next/image";
 
 import { Bounded } from "@/components/Bounded";
 import Button from "@/components/Button";
@@ -132,17 +133,22 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
             </div>
             <Button
               buttonLink="#"
-              buttonText="Explore More"
+              buttonText="Learn More"
               className="hero-button mt-12"
             />
           </div>
         </div>
 
         <div className="text-side relative z-[80] grid h-screen items-center gap-4 md:grid-cols-2">
-          <PrismicNextImage
-            className="w-full md:hidden"
-            field={slice.primary.cans_image}
-          />
+          {!isDesktop ? (
+            <Image
+              className="w-full"
+              src="/labels/all-cans.png" // Path for mobile view
+              alt="All Cans Image"
+              width={800} // Specify width
+              height={600} // Specify height
+            />
+          ) : null} {/* Do not display anything for desktop */}
           <div>
             <h2 className="text-side-heading text-balance text-6xl font-black uppercase text-sky-950 lg:text-8xl">
               <TextSplitter text="Explore More Features" />
