@@ -132,7 +132,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
             </div>
             <Button
               buttonLink="#"
-              buttonText="Learn More"
+              buttonText="Explore More"
               className="hero-button mt-12"
             />
           </div>

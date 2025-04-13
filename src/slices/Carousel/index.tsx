@@ -100,9 +100,6 @@ const Carousel = ({ slice }: CarouselProps): JSX.Element => {
         <div className="text-wrapper text-4xl font-medium">
           <p>Explore our exciting range of cool drinks!</p>
         </div>
-        <div className="mt-2 text-2xl font-normal opacity-90">
-          <p>From Black Cherry to Lemon Lime, we have it all.</p>
-        </div>
       </div>
 
       <div className="grid grid-cols-[auto,auto,auto] items-center">
