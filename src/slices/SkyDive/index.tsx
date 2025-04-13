@@ -1,6 +1,6 @@
 "use client";
 
-import { Content } from "@prismicio/client";
+// import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 
 import { Bounded } from "@/components/Bounded";
@@ -9,7 +9,7 @@ import { View } from "@react-three/drei";
 /**
  * Props for `SkyDive`.
  */
-export type SkyDiveProps = SliceComponentProps<Content.SkyDiveSlice>;
+export type SkyDiveProps = SliceComponentProps<any>;
 
 /**
  * Component for "SkyDive" Slices.

@@ -1,6 +1,6 @@
 "use client";
 
-import { Content } from "@prismicio/client";
+// import { Content } from "@prismicio/client";
 import {
   PrismicRichText,
   PrismicText,
@@ -23,21 +23,21 @@ const FLAVORS: {
   color: string;
   name: string;
 }[] = [
-  { flavor: "blackCherry", color: "#710523", name: "Black Cherry" },
-  { flavor: "grape", color: "#572981", name: "Grape Goodness" },
-  { flavor: "lemonLime", color: "#164405", name: "Lemon Lime" },
+  { flavor: "blackCherry", color: "#000000", name: "Appy Fizz" },
+  { flavor: "grape", color: "#004B93", name: "Pepsi" },
+  { flavor: "coco_cola", color: "#F40009", name: "Coco-cola" },
   {
-    flavor: "strawberryLemonade",
-    color: "#690B3D",
-    name: "Strawberry Lemonade",
+    flavor: "sprite",
+    color: "#4B7002",
+    name: "Sprite",
   },
-  { flavor: "watermelon", color: "#4B7002", name: "Watermelon Crush" },
+  { flavor: "thums", color: "#FF0000", name: "Thums Up" },
 ];
 
 /**
  * Props for `Carousel`.
  */
-export type CarouselProps = SliceComponentProps<Content.CarouselSlice>;
+export type CarouselProps = SliceComponentProps<any>;
 
 /**
  * Component for "Carousel" Slices.
@@ -91,8 +91,19 @@ const Carousel = ({ slice }: CarouselProps): JSX.Element => {
       <WavyCircles className="absolute left-1/2 top-1/2 h-[120vmin] -translate-x-1/2 -translate-y-1/2 text-[#710523]" />
 
       <h2 className="relative text-center text-5xl font-bold">
-        <PrismicText field={slice.primary.heading} />
+        Cooldrink World
       </h2>
+      <p className="relative text-center text-2xl font-medium mt-4">
+        Refreshing Flavors for Every Mood
+      </p>
+      <div className="text-area relative mx-auto text-center mt-6">
+        <div className="text-wrapper text-4xl font-medium">
+          <p>Explore our exciting range of cool drinks!</p>
+        </div>
+        <div className="mt-2 text-2xl font-normal opacity-90">
+          <p>From Black Cherry to Lemon Lime, we have it all.</p>
+        </div>
+      </div>
 
       <div className="grid grid-cols-[auto,auto,auto] items-center">
         {/* Left */}
@@ -132,9 +143,43 @@ const Carousel = ({ slice }: CarouselProps): JSX.Element => {
           <p>{FLAVORS[currentFlavorIndex].name}</p>
         </div>
         <div className="mt-2 text-2xl font-normal opacity-90">
-          <PrismicRichText field={slice.primary.price_copy} />
+          <a
+            href={`https://www.google.com/search?q=${FLAVORS[currentFlavorIndex].name
+              .toLowerCase()
+              .replace(/\s+/g, "+")}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative text-white font-bold transition-transform duration-300 ease-in-out hover:scale-125 hover:text-yellow-400"
+            style={{
+              animation: "fadeIn 2s ease-in-out",
+            }}
+          >
+            Price: ₹40
+          </a>
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes fadeIn {
+          0% {
+            opacity: 0;
+            transform: translateY(10px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes bounce {
+          0%, 100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-10px);
+          }
+        }
+      `}</style>
     </section>
   );
 };

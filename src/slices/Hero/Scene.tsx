@@ -103,7 +103,7 @@ export default function Scene({}: Props) {
       .to(can4Ref.current.position, { x: 0, y: -0.3, z: 0.5 }, 0)
       .to(can4Ref.current.rotation, { z: 0.3 }, 0)
 
-      // Can 5 -Watermelon
+      // Can 5 -coco_cola
       .to(can5Ref.current.position, { x: 0.3, y: 0.5, z: -0.5 }, 0)
       .to(can5Ref.current.rotation, { z: -0.25 }, 0)
       .to(
@@ -125,7 +125,7 @@ export default function Scene({}: Props) {
       <group ref={can2GroupRef}>
         <FloatingCan
           ref={can2Ref}
-          flavor="lemonLime"
+          flavor="thums"
           floatSpeed={FLOAT_SPEED}
         />
       </group>
@@ -134,11 +134,11 @@ export default function Scene({}: Props) {
 
       <FloatingCan
         ref={can4Ref}
-        flavor="strawberryLemonade"
+        flavor="sprite"
         floatSpeed={FLOAT_SPEED}
       />
 
-      <FloatingCan ref={can5Ref} flavor="watermelon" floatSpeed={FLOAT_SPEED} />
+      <FloatingCan ref={can5Ref} flavor="coco_cola" floatSpeed={FLOAT_SPEED} />
 
       {/* <OrbitControls /> */}
       <Environment files="/hdr/lobby.hdr" environmentIntensity={1.5} />

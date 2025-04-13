@@ -6,11 +6,11 @@ import * as THREE from "three";
 useGLTF.preload("/Soda-can.gltf");
 
 const flavorTextures = {
-  lemonLime: "/labels/lemon-lime.png",
-  grape: "/labels/grape.png",
-  blackCherry: "/labels/cherry.png",
-  strawberryLemonade: "/labels/strawberry.png",
-  watermelon: "/labels/watermelon.png",
+  thums: "/labels/thums.png",
+  grape: "/labels/pepsi.png",
+  blackCherry: "/labels/appy.png",
+  sprite: "/labels/sprite2.png",
+  coco_cola: "/labels/coco-cola.png",
 };
 
 const metalMaterial = new THREE.MeshStandardMaterial({
@@ -34,11 +34,11 @@ export function SodaCan({
   const labels = useTexture(flavorTextures);
 
   // Fixes upside down labels
-  labels.strawberryLemonade.flipY = false;
+  labels.sprite.flipY = false;
   labels.blackCherry.flipY = false;
-  labels.watermelon.flipY = false;
+  labels.coco_cola.flipY = false;
   labels.grape.flipY = false;
-  labels.lemonLime.flipY = false;
+  labels.thums.flipY = false;
 
   const label = labels[flavor];
 

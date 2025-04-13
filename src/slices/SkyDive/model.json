@@ -25,13 +25,13 @@
             "label": "Flavor",
             "placeholder": "",
             "options": [
-              "lemonLime",
+              "thums",
               "grape",
               "blackCherry",
-              "strawberryLemonade",
-              "watermelon"
+              "sprite",
+              "coco_cola"
             ],
-            "default_value": "lemonLime"
+            "default_value": "thums"
           }
         }
       },

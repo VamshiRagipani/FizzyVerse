@@ -13,7 +13,7 @@ export function FizziLogo(props: SVGProps<SVGSVGElement>) {
       className={clsx("group", props.className)}
       aria-labelledby="fizzi-logo-title"
     >
-      <title id="fizzi-logo-title">Fizzi</title>
+      <title id="fizzi-logo-title">Sprite</title>
       <g clipPath="url(#clip0_342_66)">
         <mask
           id="mask0_342_66"
@@ -52,12 +52,12 @@ export function FizziLogo(props: SVGProps<SVGSVGElement>) {
           d="M58.2 22.9c.5-1.4.8-2.8.8-4.2h-.1a10.8 10.8 0 10-10.7 10.8 10.8 10.8 0 0010-6.6z"
           mask="url(#path-3-inside-1_342_66)"
         ></path>
-      </g>
-      <defs>
-        <clipPath id="clip0_342_66">
-          <path fill="currentColor" d="M0 0h166v87H0z"></path>
-        </clipPath>
-      </defs>
+        </g>
+        <defs>
+          <clipPath id="clip0_342_66">
+            <path fill="currentColor" d="M0 0h166v87H0z"></path>
+          </clipPath>
+        </defs>
     </svg>
   );
 }
